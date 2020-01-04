@@ -15,6 +15,11 @@ python setup.py install
 
 ```python pipify -P Project_Path```
 
+where ```Project_Path``` is the path to the Python project.
+
+
 # Issues
 
-This utility tool isn't able to derive accurately 100% of the time, some dependencies that fits installation from PyPI using pip
+This utility tool isn't able to derive accurately 100% of the time, some dependencies that fits installation from PyPI using pip.
+
+You might have to edit the requirements.txt file generated, but only seldomly.
