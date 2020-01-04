@@ -15,7 +15,7 @@ def main(fp):
 def run_main():
     argp = argparse.ArgumentParser(
         description="Utility tool to generate requirements.txt file for Python projects",
-        usage="usage: main.py -P Project_Path"
+        usage="usage: python pipify -P Project_Path"
         )
     argp.add_argument("-P", "--path",action="store", type=str, help="Path to Python project")
     args = argp.parse_args()
