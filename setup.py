@@ -14,7 +14,7 @@ VERSION = get_version()
 
 setup(
     name="pipify",
-    version=VERSION,
+    version='0.1.0',
     description="simple utility tool to generate requirements.txt file for Python projects",
     author="ziord"
 )
