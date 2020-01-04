@@ -17,4 +17,4 @@ python setup.py install
 
 # Issues
 
-This utility tool isn't able to derive accurately 100% of the time some dependencies that fits installation from PyPI using pip
+This utility tool isn't able to derive accurately 100% of the time, some dependencies that fits installation from PyPI using pip
