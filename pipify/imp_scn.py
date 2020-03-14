@@ -2,6 +2,7 @@ from pyps import PyFileItr
 import importlib
 import os
 import re
+from dep_ind_mod import DEP_IND_BAD_CACHE
 
 class ImportScanner:
     def __init__(self, pyfileitr):
@@ -77,7 +78,10 @@ class ImportScanner:
                 m = importlib.import_module(mod)
                 if 'built-in' in str(m): continue
                 if 'site-packages' in str(m):
-                    self._ext_modules[m.__package__] = m.__version__
+                    if m.__package__ in DEP_IND_BAD_CACHE:
+                        self._ext_modules[m.__package__] = ''
+                    else:
+                        self._ext_modules[m.__package__] = m.__version__
             except:
                 continue
 
@@ -92,7 +96,10 @@ class ImportScanner:
             fp = os.path.join(self._pyfileitr._path, 'requirements.txt')
             with open(fp, 'w') as file:
                 for k, v in self._ext_modules.items():
-                    file.write("%s==%s\n"%(k, v))
+                    if len(v):
+                        file.write("%s==%s\n"%(k, v))
+                    else:
+                        file.write("%s\n"%(k))
             return True
         return False
 

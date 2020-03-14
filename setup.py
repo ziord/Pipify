@@ -1,5 +1,4 @@
 from setuptools import setup
-import os
 
 from pipify import __version__
 
