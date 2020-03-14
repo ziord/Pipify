@@ -38,7 +38,7 @@ class PyFileIterator:
         if os.path.exists(self._path):
             self._categorize(self._path)
         else:
-            raise ProjectPathError("Invalid Project Path%s"%self._path)
+            raise ProjectPathError("Invalid Project Path -> %s"%self._path)
     
     def _proc_abs_fp(self, root, fl):
         for file in fl:

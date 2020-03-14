@@ -1,8 +1,8 @@
-from pyps import PyFileItr
+from pipify.pyps import PyFileItr
 import importlib
 import os
 import re
-from dep_ind_mod import DEP_IND_BAD_CACHE
+from pipify.dep_ind_mod import DEP_IND_BAD_CACHE
 
 class ImportScanner:
     def __init__(self, pyfileitr):

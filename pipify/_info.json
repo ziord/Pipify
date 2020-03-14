@@ -1,0 +1,11 @@
+{
+    "name": "pipify",
+    "version": "0.1.0",
+    "author": "ziord",
+    "desc": "A utitility tool for generating requirements.txt file for Python projects",
+    "keywords": "requirements.txt pip setup.py python",
+    "project_urls": {
+        "Documentation": "https://github.com/ziord/pipify/blob/master/README.md",
+        "Source Code": "https://github.com/ziord/pipify"
+    }
+}

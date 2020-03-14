@@ -1,6 +1,9 @@
-import imp_scn
+from pipify import imp_scn
 import time
 import argparse
+from pipify import pkg
+
+__version__ = pkg.get_info()["version"]
 
 def main(fp):
     st = time.time()
@@ -18,6 +21,7 @@ def run_main():
         usage="usage: python pipify -P Project_Path"
         )
     argp.add_argument("-P", "--path",action="store", type=str, help="Path to Python project")
+    argp.add_argument("-V", "--version", action='version', version='%(prog)s ' + __version__)
     args = argp.parse_args()
     if not args.path:
         print(argp.usage)

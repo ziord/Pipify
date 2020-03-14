@@ -1,1 +1,5 @@
-__version__='0.1.0'
+from pipify.pkg import get_info
+
+data = get_info()
+__version__ = data["version"]
+__author__ = data["author"]
