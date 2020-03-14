@@ -13,7 +13,7 @@ python setup.py install
 
 # Usage 
 
-```python pipify -P Project_Path```
+```pipify -P Project_Path```
 
 where ```Project_Path``` is the path to the Python project.
 
